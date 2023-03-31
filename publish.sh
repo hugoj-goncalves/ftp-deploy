@@ -34,4 +34,4 @@ fi
 git push
 
 npm config set access public
-npm publish
+npm publish --registry https://registry.npmjs.org/
