@@ -55,7 +55,7 @@ export async function retryRequest<T>(logger: ILogger, callback: () => Promise<T
         return await callback();
     }
     catch (e: any) {
-        if (e.code >= 400 && e.code <= 499) {
+        if ((e.code >= 400 && e.code <= 499) || e.code === 'ECONNRESET') {
             logger.standard("400 level error from server when performing action - retrying...");
             logger.standard(e);
 

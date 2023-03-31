@@ -30,6 +30,9 @@ export function prettyError(logger: ILogger, args: IFtpDeployArgumentsWithDefaul
         if (errorCode === "ENOTFOUND") {
             logger.all(`The server "${args.server}" doesn't seem to exist. Do you have a typo?`);
         }
+        if (errorCode === "ECONNRESET") {
+            logger.all(`Connection with the server ${args.server} was resetted.`);
+        }
     }
     else if (typeof error.name === "string") {
         const errorName = error.name as string;
