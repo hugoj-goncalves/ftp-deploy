@@ -29,4 +29,6 @@ async function runScript() {
 }
 
 
-runScript();
+runScript().catch(err => {
+    throw new Error(err);
+});
