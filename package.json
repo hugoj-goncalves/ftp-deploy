@@ -1,6 +1,6 @@
 {
   "name": "@hjgs/ftp-deploy",
-  "version": "1.2.3-next.0",
+  "version": "1.2.3-next.1",
   "private": false,
   "description": "Deploy files to a ftp server",
   "main": "dist/module.js",
