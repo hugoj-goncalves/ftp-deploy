@@ -29,7 +29,6 @@ async function runScript() {
 }
 
 
-runScript().catch(err => {
-    console.error(err);
+runScript().catch(() => {
     process.exit(1);
 });
